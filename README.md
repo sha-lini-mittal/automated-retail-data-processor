@@ -1,10 +1,10 @@
 Automated Retail Data Processor
 
-Automated Retail Data Processor — A Streamlit-based pipeline to clean retail transaction data, produce aggregated monthly/weekly datasets, run EDA, and generate simple moving-average (SMA) forecasts for quantity, price and revenue.
+Automated Retail Data Processor - A Streamlit-based pipeline to clean retail transaction data, produce aggregated monthly/weekly datasets, run EDA, and generate simple moving-average (SMA) forecasts for quantity, price and revenue.
 
 Short description: Automated pipeline for cleaning retail sales data, producing aggregated time-series, interactive dashboards and SMA-based forecasts with evaluation metrics and downloadable outputs.
 
-🚀 Highlights
+Highlights:
 
 Automated data cleaning & aggregation (monthly & weekly).
 
@@ -18,13 +18,14 @@ sales_forecast
 
 Export processed files (cleaned, monthly & weekly aggregates) for BI or ML use.
 
-📁 Suggested repository name & short description
+Suggested repository name & short description:
 
 Repo name: automated-retail-data-processor
 
 Short description: Streamlit pipeline to clean retail data, aggregate sales, and forecast using Simple Moving Average (SMA).
 
-🏗️ Project structure (suggested)
+Project structure:
+
 automated-retail-data-processor/
 │
 ├── sales.py                  # Main Streamlit app: ingestion, cleaning, aggregation, downloads. :contentReference[oaicite:2]{index=2}
@@ -38,13 +39,12 @@ automated-retail-data-processor/
 │   └── weekly_sales_aggregated.csv
 └── notebooks/                # Optional: Jupyter notebooks, experiments
 
-⚙️ Installation & local setup
+Installation & local setup:
 
 Clone the repo:
 
 git clone https://github.com/YOUR_USERNAME/automated-retail-data-processor.git
 cd automated-retail-data-processor
-
 
 Create and activate a virtual environment (recommended):
 
@@ -81,7 +81,7 @@ openpyxl
 
 sales_forecast
 
-▶️ Run the apps locally
+Run the apps locally:
 
 Data processing / EDA / Downloads
 
@@ -103,7 +103,7 @@ sales_forecast
 
 Open http://localhost:8501 in your browser (Streamlit usually opens automatically).
 
-📊 How to use (quick flow)
+How to use (quick flow):
 
 Place your raw retail CSV (e.g., online_retail.csv) into datasets/ or upload via the sales.py app. 
 
@@ -124,11 +124,9 @@ Run sales_forecast.py to explore products, switch monthly/weekly views, enable S
 
 sales_forecast
 
-🧠 Forecasting & model details
+Forecasting & model details:
 
-Algorithm: Simple Moving Average (SMA) forecasting — forecast equals mean of the last window_size historical periods. Implemented in simple_moving_average_forecast inside sales_forecast.py. 
-
-sales_forecast
+Algorithm: Simple Moving Average (SMA) forecasting — forecast equals mean of the last window_size historical periods. Implemented in simple_moving_average_forecast inside sales_forecast.py.sales_forecast
 
 Controls: window size (2–10), forecast periods (1–12), switch between monthly/weekly aggregation. 
 
@@ -142,7 +140,7 @@ Confidence intervals: approximate 95% CIs via rolling-standard-deviation based m
 
 sales_forecast
 
-✅ Expected input columns (typical retail dataset)
+Expected input columns (typical retail dataset):
 
 The processing pipeline expects fields similar to the UCI Online Retail dataset:
 
@@ -151,64 +149,23 @@ Sales.py code inspects and aggregates columns into monthly/weekly summaries — 
 
 sales
 
-🛠 Troubleshooting & tips
-
-If python --version fails, make sure you typed it correctly (no space between -- and version):
-
-python --version
-
-
-(Typing python -- version will attempt to open a file called version in the current directory.)
-
-If you see warnings about scripts installed to a Scripts directory not on PATH (e.g., watchmedo.exe, dotenv.exe), either:
-
-add that Scripts path to your PATH, or
-
-use the full path to the script, or
-
-activate your virtual environment (recommended) where the Scripts directory will be on PATH while active.
-
+Troubleshooting & tips:
+If python --version fails, make sure you typed it correctly (no space between -- and version): python --version (Typing python -- version will attempt to open a file called version in the current directory.)
+If you see warnings about scripts installed to a Scripts directory not on PATH (e.g., watchmedo.exe, dotenv.exe), either: add that Scripts path to your PATH, or use the full path to the script, or activate your virtual environment (recommended) where the Scripts directory will be on PATH while active.
 If the app complains missing CSVs, confirm processed files are in datasets/ or re-run sales.py to create them. 
 
-sales
-
-📥 How to share your code & files with me
-
-Direct upload in chat: attach files (single files or a ZIP). I can read uploaded files and adapt the README or code. (You already uploaded sales.py and sales_forecast.py — thanks!) 
-
-sales
-
- 
-
-sales_forecast
-
-GitHub: push your repo and paste the repo URL here (public or a link to a private repo). I can review files and produce PR-ready README content.
-
-Drive/Zip link: upload a zip to Google Drive/Dropbox and share the link (make sure permissions allow viewing).
-
-🤝 Contributing
-
+Contributing:
 Fork the repository.
-
 Create a feature branch: git checkout -b feature/your-feature.
-
 Make changes, commit: git commit -am "Add feature".
-
 Push and open a Pull Request.
 (Include tests or notebooks in /notebooks when possible.)
 
-🧾 License
+License: MIT License - feel free to reuse and modify. Add your LICENSE file with MIT text.
 
-MIT License — feel free to reuse and modify. Add your LICENSE file with MIT text.
-
-🔮 Future enhancements (ideas)
-
+Future enhancements (ideas):
 Add more forecasting algorithms (ARIMA, Prophet, LSTM).
-
 Implement backtesting and more robust cross-validation for time-series.
-
 Add notifications/alerts for stock-outs or sudden revenue drops.
-
 Build a REST API endpoint to serve forecasts.
-
 Add automated unit tests and CI pipeline.
