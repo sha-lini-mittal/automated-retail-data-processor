@@ -31,7 +31,7 @@ automated-retail-data-processor/
 
 Installation & local setup:
 Clone the repo:
-git clone https://github.com/YOUR_USERNAME/automated-retail-data-processor.git
+git clone https://github.com/sha-lini-mittal/automated-retail-data-processor.git
 cd automated-retail-data-processor
 Create and activate a virtual environment
 Windows (PowerShell) -
